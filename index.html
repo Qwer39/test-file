@@ -15,6 +15,17 @@
 }
 </style>
 
+<div draggable="true" style="padding: 20px; background: lightblue;" 
+     ondragstart="event.dataTransfer.setData('text/plain', 'test')">
+     Простой перетаскиваемый элемент
+</div>
+
+<div style="padding: 50px; background: lightgray; margin-top: 20px;"
+     ondrop="alert('Брошено!'); event.preventDefault();"
+     ondragover="event.preventDefault();">
+     Зона для бросания
+</div>
+
 <!-- Перетаскиваемые элементы -->
 <div draggable="true" class="drag-item" id="item1">Элемент 1 (перетащи меня)</div>
 <div draggable="true" class="drag-item" id="item2">Элемент 2 (перетащи меня)</div>
