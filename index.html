@@ -6,14 +6,12 @@
 <body>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Создаем элементы
         const heading = document.createElement('h1');
         heading.textContent = 'Список пользователей';
         
         const list = document.createElement('ul');
         const initialUsers = ['Анна', 'Борис', 'Виктор'];
         
-        // Заполняем список пользователей
         initialUsers.forEach(user => {
             const li = document.createElement('li');
             li.textContent = user;
@@ -22,11 +20,9 @@
         
         const button = document.createElement('button');
         button.textContent = 'Добавить пользователя';
-        
-        // Добавляем элементы на страницу
+
         document.body.append(heading, list, button);
         
-        // Обработчик для кнопки
         button.addEventListener('click', function() {
             const newUser = prompt('Введите имя нового пользователя:');
             if (newUser) {
