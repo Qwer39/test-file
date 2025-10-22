@@ -1,16 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список пользователей</title>
+</head>
+<body>
 <div id="box" style="display:none">Скрытый</div>
 <script>
 function isHidden(id) {
     const element = document.getElementById(id);
-    
-    // Если элемент не найден, считаем его скрытым
+
     if (!element) {
         return true;
     }
-    
-    // Проверяем, что оба измерения равны 0
+
     return element.offsetWidth === 0 && element.offsetHeight === 0;
 }
 
-alert(isHidden('box')); // true
+alert(isHidden('box'));
 </script>
+</body>
+</html>
